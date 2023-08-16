@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeelock Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Coffeelock Calculator</h1>
+    <div class="calculator">
+        <label>Sorcerer Level: <input type="number" id="sorcererLevel" min="1" max="20"></label>
+        <label>Warlock Level: <input type="number" id="warlockLevel" min="1" max="20"></label>
+        <label>Number of Short Rests: <input type="number" id="shortRests" min="1" max="10"></label>
+        <label>Adjust Sorcery Points (from Magical Items, etc.): <input type="number" id="adjustPoints"></label>
+        <button onclick="calculate()">Calculate</button>
+        <div id="output"></div>
+    </div>
+<h2>Conversion Matrix</h2>
+<table id="conversionMatrix">
+    <tr>
+        <th>Spell Slot Level</th>
+        <th>Sorcery Point Cost</th>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>5th</td>
+        <td>7</td>
+    </tr>
+<tr>
+    <td>6th</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td>7th</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>8th</td>
+    <td>11</td>
+</tr>
+<tr>
+    <td>9th</td>
+    <td>13</td>
+</tr>
+    <!-- You can continue this table based on D&D rules or however you wish. -->
+</table>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
