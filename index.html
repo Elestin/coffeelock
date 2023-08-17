@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffeelock Calculator</title>
+    <title>Sorcerer Spell Helper</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Coffeelock Calculator</h1>
+    <h1>Sorcerer Spell Helper</h1>
+<div id="calculator">
     <div class="calculator">
-        <label>Sorcerer Level: <input type="number" id="sorcererLevel" min="1" max="20"></label>
-        <label>Warlock Level: <input type="number" id="warlockLevel" min="1" max="20"></label>
+        <h2>Coffeelock Shenanigans</h2>
+        <label>Sorcerer Level: <select id="sorcererLevel"></select></label>
+        <label>Warlock Level: <select id="warlockLevel"></select></label>
         <label>Number of Short Rests: <input type="number" id="shortRests" min="1" max="10"></label>
         <label>Adjust Sorcery Points (from Magical Items, etc.): <input type="number" id="adjustPoints"></label>
         <button onclick="calculate()">Calculate</button>
@@ -60,8 +62,23 @@
 </tr>
     <!-- You can continue this table based on D&D rules or however you wish. -->
 </table>
-
-
+</div>
+<div id="tables">
+<h2>Available Spell Slots</h2>
+<table id="spellSlotsTable">
+    <tr>
+        <th>Spell Slot Level</th>
+        <th>Available Slots</th>
+    </tr>
+    <!-- Rows will be populated by the JavaScript -->
+</table>
+</div>
+<h2>Cast Spell</h2>
+<select id="spellLevelDropdown">
+  <!-- Options will be dynamically added by the JavaScript -->
+</select>
+<button onclick="castSpell()">Cast Spell</button>
+<input type="checkbox" id="useSorceryPoints"> Cast using Sorcery Points
     <script src="scripts.js"></script>
 </body>
 </html>

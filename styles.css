@@ -53,3 +53,19 @@ tr:last-child td:first-child {
 tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
+#calculator {
+    float: left;
+    width: 50%; 
+}
+
+#tables {
+    float: right;
+    width: 50%;
+}
+
+/* Clearfix to prevent layout breakage due to floating elements */
+body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
